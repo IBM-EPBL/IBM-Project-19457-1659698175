@@ -3,8 +3,8 @@ import ibm_boto3
 from ibm_botocore.client import Config, ClientError
 
 COS_ENDPOINT="https://s3.jp-tok.cloud-object-storage.appdomain.cloud"
-COS_API_KEY_ID="HeLicT9-MU-xM1V8RIo97ZDffWX4KHTUmfQBhAh6fL_m"
-COS_INSTANCE_CRN="crn:v1:bluemix:public:cloud-object-storage:global:a/e8ca9836018a487ebdb4ce9eacc05850:e917cda3-783f-47aa-9b9f-5436b0a639b3::"
+COS_API_KEY_ID="DcQC8l1E_6PIq_bwHGHf-_hmu95b11M-H6Qputp2VfjL"
+COS_INSTANCE_CRN="crn:v1:bluemix:public:cloud-object-storage:global:a/0834fd9d10254d12b564b9a26b86f44b:802b5b02-ba01-491c-b67c-734e1f668dab::"
 
 
 
