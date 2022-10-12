@@ -2,16 +2,16 @@
 
 
 
-#Plasma Donor Application
+#PLASMA DONOR APPLICATION
 ```text
 TECHNOLOGY : Cloud Application 
 IBM-Project-19457-1659698175
 ```
-##Software Required:
+##SOFTWARE REQUIREMENTS:
 ```text
 Python, Flask , Docker
 ```
-##system Required:
+##SYSTEM REQUIREMENT:
 ```text
 8GB RAM,Intel Core i3,OS-Windows/Linux/MAC ,Laptop or Desktop
 During the COVID 19 crisis, the requirement of plasma became a high priority and the donor count has become low. 
@@ -34,13 +34,13 @@ immunological problems, and genetic anomalies. Every blood bank claims to be out
 blood, so we need to make people aware of the issue and offer support. Numerous camps,
 seminars, and applications can be of great help.
 ```
-##Project Workflow:
+##PROJECT WORKFLOW:
 ```text
 The user interacts with the application.
 
- Registers by giving the details as a donor.
+Registers by giving the details as a donor.
 
- The database will have all the details and if a user posts a request then the concerned blood   group donors will get notified about it.
+The database will have all the details and if a user posts a request then the concerned blood group donors will get notified about it.
  ```
  
 
