@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: job-portal-1
-          image: jp.icr.io/ponni_ntp/job
+          image: jp.icr.io/paavai_ntp/job
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
