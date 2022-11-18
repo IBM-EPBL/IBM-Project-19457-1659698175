@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block head %}
+	  <title>Nutrify</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/indexstyle.css')}}">
+{% endblock %}
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./">
+          HELLO!!
+        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link active" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Signin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/signup">Signup</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <br>
+    <h2 style="text-align:center;font-family:cursive;">Your little effort can give others second chance to live!!</h2>
+    <div class="text-center">
+        <img src="static/home.png" class="rounded" alt="..." height="600px" width="900px" padding="60px">
+      </div>
+
+  </body>
+</html>
