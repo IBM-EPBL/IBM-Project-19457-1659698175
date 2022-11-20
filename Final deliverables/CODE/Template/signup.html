@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% from "_render_field.html" import render_error_field %}
+
+{% block head %}
+  <title>Signup Page</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+{% endblock %}
+
+{% block body %}
+<br>
+<br>
+<div class="container">
+  <form action="{{url_for('sign_up')}}" method="POST" novalidate>
+    {{ form.csrf_token }}
+    <h4 class="text-center ">New Registration</h4>
+    <div class="row p-2">
+      <div class="col-sm-6 form-group">
+        <label for="name-f">Username</label>
+        {{ form.username(class="form-control", id="name-f", placeholder="Enter your user name."  ) }}
+      </div>
+      {{ render_error_field(form.username) }}
+
+      <div class="col-sm-6 form-group">
+        <label for="email">Email</label>
+        {{ form.email(class="form-control", id="email", placeholder="Enter your email."  ) }}
+      </div>
+      {{ render_error_field(form.email) }}
+
+      <div class="col-sm-6 form-group">
+        <label for="address">Address </label>
+        {{ form.address(class="form-control", id="address", placeholder="Enter your address."  ) }}
+      </div>
+      {{ render_error_field(form.address) }}
+
+      <div class="col-sm-6 form-group">
+        <label for="Date">Date Of Birth</label>
+        {{ form.date(class="form-control") }}
+      </div>
+      {{ render_error_field(form.date) }}
+
+      <div class="col-sm-6 form-group">
+        <label for="sex">Gender</label>
+        {{ form.gender(class="form-control browser-default custom-select", id="sex") }}
+      </div>
+      {{ render_error_field(form.gender) }}
+
+      <div class="col-sm-3 form-group">
+        <label for="tel">Phone</label>
+        {{ form.phone(class="form-control", id="tel") }}
+      </div>
+      {{ render_error_field(form.phone) }}
+
+      <div class="col-sm-3 form-group">
+        <label for="covid-record">Covid-19 Record:</label>
+        {{ form.covid(class="form-control browser-default custom-select", id="covid-record") }}
+      </div>
+      {{ render_error_field(form.covid) }}
+
+      <div class="col-sm-6 form-group">
+        <label for="blood-group">Choose your Blood Type:</label>
+        {{ form.bloodgroup(class="form-control browser-default custom-select", id="blood-group") }}
+      </div>
+      {{ render_error_field(form.bloodgroup) }}
+
+      <div class="col-sm-6 form-group">
+        <label for="pass">Password</label>
+        {{ form.pass1(class="form-control", id="pass", placeholder="Enter your password."  ) }}
+      </div>
+      {{ render_error_field(form.pass1) }}
+
+      <div class="col-sm-6 form-group">
+        <label for="pass2">Confirm Password</label>
+        {{ form.pass2(class="form-control", id="pass2", placeholder="Re-enter your password."  ) }}
+      </div>
+      {{ render_error_field(form.pass2) }}
+
+      <br>
+      <div class="col-sm-12 form-group mb-0 text-center">
+        <button type="submit" class="btn btn-primary ">Register</button>
+      </div>
+
+    </div>
+  </form>
+
+</div>
+
+{% endblock %}

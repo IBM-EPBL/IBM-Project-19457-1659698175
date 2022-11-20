@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{username}}'s Dashboard</title>
+    <script src="../static/dash.js" ></script>
+    <link href="../static/dash.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="../static/dash.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>html{
+      font-family: 'League Spartan', sans-serif;
+      background-color: #DFDFDF;
+  }
+  body{
+      background-color: rgb(240, 240, 240);
+      margin: 35px 30px 0px 30px;
+      
+      min-height: 1024px;
+      overflow:auto;
+      font-family: 'Poppins', sans-serif;
+  }
+  .btn{
+          
+          display: flex;
+            align-items: center;
+            justify-content: center;
+          width: 200px;
+          border: 1px solid #FE725D;
+            padding: 12px 15px;
+        }
+        .btn:hover{
+          background-color: #FE725D;
+          border: 1px solid #ff5353;
+          color: white;
+        }
+
+ 
+  img{
+    
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  @media screen and (max-width:600px){
+    .nav-list a{
+      font-size: 10px;
+    }
+    .nav-logo{
+      font-size: 10px;
+      margin-left: 1px;
+   
+    }
+    .nav-list li {
+  display: inline-block;
+  margin-left: 1em;
+  }
+  h2
+  {
+   font-size: 20px; 
+  }
+  }
+  
+     </style>
+    
+</head>
+
+  <body >
+    
+<div class="side-bar">
+  <a id="a" href="#"  class="active">Hi🖐{{username}}!</a>
+  <a id="a home" href="/contact" onclick="home()">Home</a>
+  <a  id="a" href="/form1" onclick="form1()">Request Plasma</a>
+  
+  
+</div>
+<nav class="nav nav-2">
+ 
+  <div class="nav-list left">
+    <label class="switch">
+      
+      <input type="hidden" id="username" name="username" value="{{username}}">
+          <input type="hidden" id="role" name="role" value="{{role}}">
+          
+         <input type="checkbox" id="toggle" onchange="functio()" >
+          <span class="slider round"></span>
+        </label>
+  
+      
+      <h3 id="result" >{{role}}</h3>
+    </div>
+    
+</nav>
+
+<div class="content">
+ 
+<H2>Available donors</H2>
+<div class="row1-container">
+  <div class="box  cyan">
+    <h2>Meena</h2>
+    <p>Blood : O+ <br>Location Chennai<br>Contact 982376312</p>
+    
+  </div>
+
+  <div class="box red">
+    <h2>Sarath</h2>
+    <p>Blood : B- <br>Location Chennai<br>Contact 992376312</p>
+   
+  </div>
+
+  <div class="box blue">
+    <h2>Karthi</h2>
+    <p>Blood : A- <br>Location Kerala<br>Contact 982376312</p>
+   
+  </div>
+  <div class="box orange">
+    <h2>Sandhya</h2>
+    <p>Blood : A+ <br>Location Chennai<br>Contact 982376312</p>
+    
+  </div>
+</div>
+<div class="row1-container">
+  <div class="box orange">
+    <h2>Suresh</h2>
+    <p>Blood : A+ <br>Location Chennai<br>Contact 982376312</p>
+    
+  </div>
+  <div class="box red">
+    <h2>Vikram</h2>
+    <p>Blood : AB+ <br>Location Kolkata<br>Contact 977237631</p>
+   
+  </div>
+
+  <div class="box blue">
+    <h2>Kamal</h2>
+    <p>Blood : O- <br>Location Mumbai<br>Contact 682376356</p>
+   
+  </div>
+  <div class="box  cyan">
+    <h2>Dinesh</h2>
+    <p>Blood : O+ <br>Location Chennai<br>Contact 982376312</p>
+    
+  </div>
+</div>
+</div>
+  
+            
+        
+
+   
+    
+</body>
+</html>

@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Plasma</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/indexstyle.css')}}">
+<link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+<style>
+    .form {
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 10px 20px;
+        max-height: 600px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea,
+    select {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        font-size: 13px;
+        height: auto;
+        margin: 0;
+        outline: 0;
+        padding: 10px;
+        width: 100%;
+        background-color: #e8eeef;
+        color: #8a97a0;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin: 0 4px 8px 0;
+    }
+
+    input[type="tel"] {
+        margin-bottom: 5px;
+    }
+
+    select {
+        padding: 6px;
+        height: 32px;
+        border-radius: 2px;
+    }
+
+    button {
+        padding: 19px 39px 18px 39px;
+        color: #FFF;
+        background-color: #4bc970;
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 5px;
+        width: 100%;
+        border: 1px solid #3ac162;
+        border-width: 1px 1px 3px;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        margin-bottom: 10px;
+    }
+
+    fieldset {
+        margin-bottom: 30px;
+        border: none;
+    }
+
+    legend {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    label.light {
+        font-weight: 300;
+        display: inline;
+    }
+
+    .number {
+        background-color: #5fcf80;
+        color: #fff;
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        font-size: 0.8em;
+        margin-right: 4px;
+        line-height: 30px;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+        border-radius: 100%;
+    }
+
+    .content {
+        overflow: scroll;
+    }
+
+    @media screen and (min-width: 480px) {
+
+        .form {
+            max-width: 480px;
+        }
+
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="form">
+    
+        <h1>Request Plasma </h1>
+
+
+
+
+        <label for="name"> Recipient Name:</label>
+        <input type="text" id="name" name="rname">
+
+
+        <label>Age:</label>
+
+        <input type="number" id="age" name="age">
+
+
+
+
+
+
+        <label for="job">Sex:</label>
+        <select id="sex" name="sex">
+            <optgroup label="Sex">
+                <option value="FEMALE">FEMALE</option>
+                <option value="MALE">MALE</option>
+
+
+            </optgroup>
+
+
+        </select>
+
+
+
+        <label for="job">Blood Group:</label>
+        <select id="blood" name="blood">
+            <optgroup label="Web">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O-">O-</option>
+                <option value="O+">O+</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+
+            </optgroup>
+
+
+        </select>
+        <label>Phone number</label>
+
+        <input type="tel" id="phno" name="phnumber">
+
+
+
+        <button type="submit" onclick="sendrequest()">Send Request!</button>
+
+</div>
+{% endblock %}
