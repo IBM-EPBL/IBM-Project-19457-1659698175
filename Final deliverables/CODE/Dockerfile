@@ -1,13 +1,12 @@
-FROM python:3.8.8
+FROM python
 
 WORKDIR /app
 
-ADD . /first_flask_project
-
-COPY ./requirements.txt /app/requirements.txt
-
-RUN pip install --upgrade pip
-
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-COPY . /app
+COPY . .
+
+EXPOSE 8080
+
+CMD ["python", "-m" , "flask", "run", "--host=0.0.0.0"]
