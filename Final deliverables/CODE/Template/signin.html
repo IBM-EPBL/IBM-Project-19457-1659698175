@@ -14,6 +14,17 @@
     <h1 style="text-align:center;">Welcome</h1>
   </div>
   <br>
+  <div class="donate" style="text-align:center;font-size: 30px;">
+    <pre style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">To donate blood plasma, you must meet all of the requirements for whole blood donation.
+      There are four major blood groups: A, B, AB and O. 
+      Donors who are blood group AB are special plasma donors
+      because their plasma can be given to any of the other blood types.
+       Because of this, AB plasma is frequently in high demand.
+
+      You may donate plasma as often as every 28 days.
+      DONATE NOW!!
+    </pre> 
+  </div>
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
@@ -21,13 +32,14 @@
           class="img-fluid" alt="Sample image">
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        
+        <form method="POST" action="{{ url_for('home') }}" novalidate>
+          {{ form.csrf_token }}
           <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
             <h1>Sign In</h1>
 
           </div>
           <br>
-
+          
           <!-- Email input -->
           <div class="form-outline mb-4">
             {{ form.email(class="form-control form-control-lg", id="form3Example3" ) }}
@@ -58,7 +70,7 @@
                 class="link-danger">Register</a></p>
           </div>
 
-       
+        </form>
       </div>
     </div>
   </div>
