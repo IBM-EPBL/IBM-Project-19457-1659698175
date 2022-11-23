@@ -1,9 +1,10 @@
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
+
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
 
 def SendEmail(email, username):
     FROM_EMAIL =  "plasmadonarapp@gmail.com"
