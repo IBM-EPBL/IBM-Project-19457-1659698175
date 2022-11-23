@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-	  <title>Nutrify</title>
+    <title>Nutrify</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/indexstyle.css')}}">
 {% endblock %}
 
@@ -14,11 +14,13 @@
         </a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link active" href="/dash">Home</a>
+            <a class="nav-link active" href="/home">Home</a>
           </li>
-          
           <li class="nav-item">
-            <a class="nav-link active" href="/signin">Signin</a>
+            <a class="nav-link active" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Signin</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="/signup">Signup</a>
