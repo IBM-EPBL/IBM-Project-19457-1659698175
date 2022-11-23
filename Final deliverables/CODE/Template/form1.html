@@ -122,7 +122,7 @@
 </style>
 {% endblock %}
 {% block body %}
-<div class="form">
+<form class="form" action="{{url_for('form1')}}" method="POST" novalidate>
     
         <h1>Request Plasma </h1>
 
@@ -178,7 +178,7 @@
 
 
 
-        <button type="submit" onclick="sendrequest()">Send Request!</button>
+        <button type="submit">Send Request!</button>
 
-</div>
+    </form>
 {% endblock %}
