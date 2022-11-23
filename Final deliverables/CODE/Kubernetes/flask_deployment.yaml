@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plasma
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: plasma
+  template:
+    metadata:
+      labels:
+        app: plasma
+
+    spec:
+      containers:
+        - name: plasma-container
+          image: jp.icr.io/plasma_app/plasma
+          ports:
+            - containerPort: 5000
+              protocol: TCP
