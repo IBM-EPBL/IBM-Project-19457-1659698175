@@ -1,0 +1,9 @@
+Flask
+Flask-WTF
+WTForms
+email_validator
+ibm-db
+sendgrid
+python-dotenv
+ibm-cos-sdk
+openapi_client
