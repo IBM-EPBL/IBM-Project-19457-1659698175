@@ -3,14 +3,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 import ibm_db
-import testmail
 from flask import Flask, render_template, redirect, url_for, flash, escape, session
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, EmailField, DateField, SelectField
 from wtforms.validators import InputRequired, Length, Email, EqualTo
 from flask import request
+import testmail
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.config['SECRET_KEY'] = "sdkjfbibnbsfm2352ujnhdouafbjn123R2rjkx23bnrzaEvy45yvrtht"
 
 
@@ -18,7 +18,7 @@ DB_HOSTNAME = os.getenv("DB_HOSTNAME")
 DB_PORT = os.getenv("DB_PORT")
 DB_USERNAME = os.getenv("DB_USERNAME")
 DB_PASS = os.getenv("DB_PASS")
- 
+
 DB_STRING = f"DATABASE=bludb;HOSTNAME={DB_HOSTNAME};PORT={DB_PORT};SECURITY=SSL;SSLServerCertificate=SSLCertificate.crt;UID={DB_USERNAME};PWD={DB_PASS}" 
 conn = ibm_db.connect(DB_STRING,'','')
 print(conn)
@@ -110,17 +110,41 @@ def sign_up():
     else:
         return render_template("signup.html", form=form)
 
+@app.route('/form1',methods=['GET', 'POST'])
+def form1():
+    if request.method=='POST':
+        rname = str(request.form['rname'])
+        age= str(request.form['age'])
+        sex = str(request.form['sex'])
+        blood = str(request.form['blood'])
+        phnumber = str(request.form['phnumber'])
+        sql = "INSERT INTO REQUEST (NAME,AGE,GENDER,BLOOD,PHONE) VALUES (?, ?, ?, ?, ?)"
+        prep_stmt = ibm_db.prepare(conn, sql)
+        ibm_db.bind_param(prep_stmt, 1, rname)
+        ibm_db.bind_param(prep_stmt, 2, age)
+        ibm_db.bind_param(prep_stmt, 3, sex)
+        ibm_db.bind_param(prep_stmt, 4, blood)
+        ibm_db.bind_param(prep_stmt, 5, phnumber)
+        ibm_db.execute(prep_stmt)
+        flash("Submitted Successfully", "success")
+        response = redirect(url_for('home'))
+        return response
+    else:
+      return render_template("form1.html")
+
 @app.route('/home')
 def ho():
     return render_template("home.html")
 
-@app.route('/about')
+@app.route('/dash')
 def about():
-    return render_template("about.html")
+    return render_template("dash.html")
 
 @app.route('/contact')
 def contact():
     return render_template("contact.html")
 
-if _name_ == '_main_':
+
+
+if __name__ == '__main__':
     app.run(debug=True)
