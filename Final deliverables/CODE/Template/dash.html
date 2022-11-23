@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{username}}'s Dashboard</title>
-    <script src="../static/dash.js" ></script>
+{% extends "base.html" %}
+
+
+{% block head %}
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/dash.css')}}">
+    
     <link href="../static/dash.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -73,18 +72,11 @@
   }
   
      </style>
-    
-</head>
 
-  <body >
+{% endblock %}
+{% block body %}
+
     
-<div class="side-bar">
-  <a id="a" href="#"  class="active">Hi🖐{{username}}!</a>
-  <a id="a home" href="/contact" onclick="home()">Home</a>
-  <a  id="a" href="/form1" onclick="form1()">Request Plasma</a>
-  
-  
-</div>
 <nav class="nav nav-2">
  
   <div class="nav-list left">
@@ -154,11 +146,4 @@
   </div>
 </div>
 </div>
-  
-            
-        
-
-   
-    
-</body>
-</html>
+{% endblock %}
