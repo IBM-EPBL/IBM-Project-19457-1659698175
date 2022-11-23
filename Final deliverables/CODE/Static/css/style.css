@@ -3,7 +3,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color:#E5E4E2;
+    background-color:#FDCAE3;
     font-family: "lato", sans-serif;
   }
   .signupFrm {
@@ -90,5 +90,3 @@ body {
     align-items: center;
 
   }
-
-.about {background-color: coral;}
